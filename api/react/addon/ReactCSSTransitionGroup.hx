@@ -1,6 +1,6 @@
 package api.react.addon;
 
-@:jsRequire("react-addons-transition-group")
+@:jsRequire("react-addons-css-transition-group")
 extern class ReactCSSTransitionGroup
 {
 	public static var transitionName : String;
