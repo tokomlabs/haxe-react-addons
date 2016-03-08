@@ -1,4 +1,4 @@
-package api.react.addon.material;
+package api.react.addon.materialui;
 
 @:jsRequire("material-ui/lib/tabs/tabs")
 extern class Tabs
