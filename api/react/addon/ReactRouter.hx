@@ -7,4 +7,5 @@ Extern for [ReactSwipe](https://github.com/reactjs/react-router)
 extern class ReactRouter {
 	static public var hashHistory : Dynamic;
 	static public var browserHistory : Dynamic;
+	static public var withRouter : Dynamic -> Dynamic;
 }
