@@ -5,6 +5,7 @@ Compatible with Haxe 3.2+ and the [Haxe react](https://github.com/massiveinterac
 ### List of supported externs
 
 * (deprecated, use React Redux Form or other) [Formsy](https://github.com/christianalfoni/formsy-react)
+* (deprecated, use React Redux Form or other) [Formsy Material UI](https://github.com/mbrookes/formsy-material-ui)
 * [Material UI](http://www.material-ui.com/)
 * [Infinite](https://github.com/seatgeek/react-infinite)
 * [Infinite Scroller](https://github.com/CassetteRocks/react-infinite-scroller.git)
