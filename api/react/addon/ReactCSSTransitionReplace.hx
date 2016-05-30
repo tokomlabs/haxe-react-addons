@@ -1,5 +1,8 @@
 package api.react.addon;
 
+/**
+Extern for [React CSS Transition Replace](https://github.com/marnusw/react-css-transition-replace)
+**/
 @:jsRequire("react-css-transition-replace")
 extern class ReactCSSTransitionReplace
 {
