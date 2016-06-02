@@ -17,7 +17,7 @@ extern class ReactReduxForm {
 }
 
 extern class ReactReduxFormActions {
-	public function change() : Void;
+	public function change(model : String, value : Dynamic, ? options : Dynamic) : Void;
 	public function reset(model : String) : Void;
 	public function merge() : Void;
 	public function xor() : Void;
@@ -29,7 +29,7 @@ extern class ReactReduxFormActions {
 	public function move() : Void;
 	public function load() : Void;
 	public function omit() : Void;
-	public function validate() : Void;
+	public function validate(model : String, validators : Dynamic) : Void;
 	public function setValidity() : Void;
 	public function setErrors() : Void;
 	public function setPending() : Void;
