@@ -17,22 +17,22 @@ extern class ReactReduxForm {
 }
 
 extern class ReactReduxFormActions {
-	static public function change() : Void;
-	static public function reset() : Void;
-	static public function merge() : Void;
-	static public function xor() : Void;
-	static public function push() : Void;
-	static public function toggle() : Void;
-	static public function filter() : Void;
-	static public function map() : Void;
-	static public function remove() : Void;
-	static public function move() : Void;
-	static public function load() : Void;
-	static public function omit() : Void;
-	static public function validate() : Void;
-	static public function setValidity() : Void;
-	static public function setErrors() : Void;
-	static public function setPending() : Void;
-	static public function setAsyncValidity() : Void;
-	static public function submit() : Void;
+	public function change() : Void;
+	public function reset(model : String) : Void;
+	public function merge() : Void;
+	public function xor() : Void;
+	public function push() : Void;
+	public function toggle() : Void;
+	public function filter() : Void;
+	public function map() : Void;
+	public function remove() : Void;
+	public function move() : Void;
+	public function load() : Void;
+	public function omit() : Void;
+	public function validate() : Void;
+	public function setValidity() : Void;
+	public function setErrors() : Void;
+	public function setPending() : Void;
+	public function setAsyncValidity() : Void;
+	public function submit() : Void;
 }
