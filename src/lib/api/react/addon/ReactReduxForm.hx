@@ -19,6 +19,8 @@ extern class ReactReduxForm {
 extern class ReactReduxFormActions {
 	public function change(model : String, value : Dynamic, ? options : Dynamic) : Void;
 	public function reset(model : String) : Void;
+	public function focus(model : String) : Void;
+	public function blur(model : String) : Void;
 	public function merge() : Void;
 	public function xor() : Void;
 	public function push() : Void;
