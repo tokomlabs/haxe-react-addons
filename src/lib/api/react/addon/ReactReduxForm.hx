@@ -17,24 +17,24 @@ extern class ReactReduxForm {
 }
 
 extern class ReactReduxFormActions {
-	public function change(model : String, value : Dynamic, ? options : Dynamic) : Void;
-	public function reset(model : String) : Void;
-	public function focus(model : String) : Void;
-	public function blur(model : String) : Void;
-	public function merge() : Void;
-	public function xor() : Void;
-	public function push() : Void;
-	public function toggle() : Void;
-	public function filter() : Void;
-	public function map() : Void;
-	public function remove() : Void;
-	public function move() : Void;
-	public function load() : Void;
-	public function omit() : Void;
-	public function validate(model : String, validators : Dynamic) : Void;
-	public function setValidity() : Void;
-	public function setErrors() : Void;
-	public function setPending() : Void;
-	public function setAsyncValidity() : Void;
-	public function submit() : Void;
+	public function change(model : String, value : Dynamic, ? options : Dynamic) : Dynamic;
+	public function reset(model : String) : Dynamic;
+	public function focus(model : String) : Dynamic;
+	public function blur(model : String) : Dynamic;
+	public function merge() : Dynamic;
+	public function xor() : Dynamic;
+	public function push() : Dynamic;
+	public function toggle() : Dynamic;
+	public function filter() : Dynamic;
+	public function map() : Dynamic;
+	public function remove() : Dynamic;
+	public function move() : Dynamic;
+	public function load() : Dynamic;
+	public function omit() : Dynamic;
+	public function validate(model : String, validators : Dynamic) : Dynamic;
+	public function setValidity() : Dynamic;
+	public function setErrors() : Dynamic;
+	public function setPending() : Dynamic;
+	public function setAsyncValidity() : Dynamic;
+	public function submit(model : String, ? promise : Dynamic) : Dynamic;
 }
