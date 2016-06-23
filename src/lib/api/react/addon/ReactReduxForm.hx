@@ -33,7 +33,7 @@ extern class ReactReduxFormActions {
 	public function omit() : Dynamic;
 	public function validate(model : String, validators : Dynamic) : Dynamic;
 	public function setValidity() : Dynamic;
-	public function setErrors() : Dynamic;
+	public function setErrors(model : String, errors : Dynamic) : Dynamic;
 	public function setPending() : Dynamic;
 	public function setAsyncValidity() : Dynamic;
 	public function submit(model : String, ? promise : Dynamic) : Dynamic;
