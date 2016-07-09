@@ -37,4 +37,6 @@ extern class ReactReduxFormActions {
 	public function setPending() : Dynamic;
 	public function setAsyncValidity() : Dynamic;
 	public function submit(model : String, ? promise : Dynamic) : Dynamic;
+	public function setTouched(model : String) : Dynamic;
+	public function setUntouched(model : String) : Dynamic;
 }
