@@ -20,7 +20,7 @@ Compatible with Haxe 3.2+ and the [Haxe react](https://github.com/massiveinterac
 * React Swiper, a Haxe React component for [Swiper](https://github.com/nolimits4web/Swiper)
 * [React Tap Event](https://github.com/zilverline/react-tap-event-plugin)
 * [Redux Auth Wrapper](https://github.com/mjrussell/redux-auth-wrapper)
-
+* [React Chartist](https://github.com/lolJS/react-chartist)
 And more to come...
 
 ## API
