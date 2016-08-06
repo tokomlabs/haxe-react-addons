@@ -32,6 +32,7 @@ typedef SwiperOptions = {
     ? autoHeight : Bool,
     ? roundLengths : Bool,
     ? nested : Bool,
+    ? centeredSlides: Bool,
     // slides grid
     ? spaceBetween : Int,
     ? slidesPerView : Int,
@@ -57,7 +58,12 @@ typedef SwiperOptions = {
     ? onSlidePrevStart : Swiper -> Void,
     ? onSlidePrevEnd : Swiper -> Void,
     ? onTap : Swiper -> Dynamic -> Void,
-    ? onSetTranslate : Swiper -> Dynamic -> Void
+    ? onSetTranslate : Swiper -> Dynamic -> Void,
+    // Animations
+    ? watchSlidesProgress : Bool,
+    ? onTouchEnd : Swiper -> Void,
+    ? onTouchStart : Swiper -> Void,
+    ? onProgress : Swiper -> Int -> Void
 }
 
 typedef ReactSwiperProps = {
@@ -130,3 +136,4 @@ class ReactSwiper extends ReactComponentOf<ReactSwiperProps, Dynamic, Dynamic> {
         ');
     }
 }
+
