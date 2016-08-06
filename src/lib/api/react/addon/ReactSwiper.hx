@@ -17,7 +17,7 @@ extern class Swiper {
     public function off(callback : String) : Void;
     public var activeIndex (default, null) : Int;
     public var previousIndex (default, null) : Int;
-    public var slides (default, null) : Array<js.html.DOMElement>;
+    public var slides (default, null) : Array<Dynamic>;
 }
 
 typedef SwiperOptions = {
