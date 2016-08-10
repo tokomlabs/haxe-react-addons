@@ -18,6 +18,7 @@ extern class Swiper {
     public var activeIndex (default, null) : Int;
     public var previousIndex (default, null) : Int;
     public var slides (default, null) : Array<Dynamic>;
+    public var wrapper (default, null) : Array<Dynamic>;
 }
 
 typedef SwiperOptions = {
@@ -63,7 +64,9 @@ typedef SwiperOptions = {
     ? watchSlidesProgress : Bool,
     ? onTouchEnd : Swiper -> Void,
     ? onTouchStart : Swiper -> Void,
-    ? onProgress : Swiper -> Int -> Void
+    ? onProgress : Swiper -> Int -> Void,
+    // FreeMode
+    ? freeModeMomentum : Bool
 }
 
 typedef ReactSwiperProps = {
