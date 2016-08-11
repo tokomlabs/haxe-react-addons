@@ -3,6 +3,11 @@ package api.react.addon;
 import api.react.ReactComponent;
 import api.react.ReactMacro.jsx;
 
+abstract SwiperHandler(Dynamic)
+from Swiper -> Void to Swiper -> Void
+from Swiper -> js.html.Event -> Void to Swiper -> js.html.Event -> Void
+{}
+
 /**
 Extern for [Swiper](https://github.com/nolimits4web/Swiper)
 **/
@@ -12,8 +17,8 @@ extern class Swiper {
     public function update() : Void;
     public function slideTo(index : Int) : Void;
     public function destroy(deleteInstance : Bool, cleanupStyles : Bool) : Void;
-    public function on(callback : String, handler : Void -> Void) : Void;
-    public function once(callback : String, handler : Void -> Void) : Void;
+    public function on(callback : String, handler : SwiperHandler) : Void;
+    public function once(callback : String, handler : SwiperHandler) : Void;
     public function off(callback : String) : Void;
     public var activeIndex (default, null) : Int;
     public var previousIndex (default, null) : Int;
