@@ -15,7 +15,7 @@ Extern for [Swiper](https://github.com/nolimits4web/Swiper)
 extern class Swiper {
     public function new(elt : js.html.DOMElement, options : SwiperOptions);
     public function update() : Void;
-    public function slideTo(index : Int) : Void;
+    public function slideTo(index : Int, ? speed : Int, ? runCallbacks : Bool) : Void;
     public function destroy(deleteInstance : Bool, cleanupStyles : Bool) : Void;
     public function on(callback : String, handler : SwiperHandler) : Void;
     public function once(callback : String, handler : SwiperHandler) : Void;
