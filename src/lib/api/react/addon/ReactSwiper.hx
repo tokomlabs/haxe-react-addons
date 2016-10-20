@@ -14,6 +14,7 @@ Extern for [Swiper](https://github.com/nolimits4web/Swiper)
 @:native("window.Swiper")
 extern class Swiper {
     public function new(elt : js.html.DOMElement, options : SwiperOptions);
+    public function updateSlidesSize() : Void;
     public function update(? updateTranslate : Bool) : Void;
     public function slidePrev(? runCallbacks : Bool, ? speed : Int) : Void;
     public function slideNext(? runCallbacks : Bool, ? speed : Int) : Void;
