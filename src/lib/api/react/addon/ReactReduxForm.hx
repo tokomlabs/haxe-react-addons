@@ -9,6 +9,7 @@ Extern for [ReactReduxForm](https://github.com/davidkpiano/react-redux-form)
 **/
 @:jsRequire('react-redux-form')
 extern class ReactReduxForm {
+	static public function combineForms(forms : Dynamic) : Dynamic;
 	static public function modelReducer(key : Dynamic, ? defaultState : Dynamic) : Dynamic;
 	static public function modeled(rdr : Dynamic, key : String) : Dynamic;
 	static public function formReducer(key : Dynamic, ? defaultState : Dynamic) : Dynamic;
