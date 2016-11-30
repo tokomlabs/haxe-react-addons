@@ -23,6 +23,7 @@ extern class Swiper {
     public function on(callback : String, handler : SwiperHandler) : Void;
     public function once(callback : String, handler : SwiperHandler) : Void;
     public function off(callback : String) : Void;
+    public var realIndex (default, null) : Int;
     public var activeIndex (default, null) : Int;
     public var previousIndex (default, null) : Int;
     public var slides (default, null) : Array<Dynamic>;
@@ -60,6 +61,7 @@ typedef SwiperOptions = {
     ? loopAdditionalSlides : Int,
     ? loopedSlides : Int,
     // callbacks
+    ? onInit : Swiper -> Void,
     ? onSlideChangeStart : Swiper -> Void,
     ? onSlideChangeEnd : Swiper -> Void,
     ? onSlideNextStart : Swiper -> Void,
