@@ -1,7 +1,7 @@
 {
 	"name": "react-addons",
 	"license": "MIT",
-	"tags": [],
+	"tags": ["extern","react","js","javascript"],
 	"description": "Haxe React Addons is a set of React libs externs to use with Haxe and Haxe React",
 	"contributors": [
     	"tokom","zabojad"
@@ -11,6 +11,6 @@
 	"url": "https://github.com/tokomlabs/haxe-react-addons",
 	"classPath": "src/lib",
 	"dependencies": {
-		"react": ""
+		"react": "^1.0.0"
 	}
 }

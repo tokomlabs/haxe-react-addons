@@ -1,6 +1,6 @@
 # Haxe externs for third party react components
 
-Compatible with Haxe 3.2+ and the [Haxe react](https://github.com/massiveinteractive/haxe-react) library.
+Compatible with Haxe 3.2+ and [Haxe react](https://github.com/massiveinteractive/haxe-react) > 1.0.0.
 
 ### List of supported externs
 
@@ -14,7 +14,7 @@ Compatible with Haxe 3.2+ and the [Haxe react](https://github.com/massiveinterac
 * [CSS transition replace](https://github.com/marnusw/react-css-transition-replace)
 * [**React Intl**](https://github.com/yahoo/react-intl)
 * [**React Redux**](https://github.com/reactjs/react-redux)
-* [React Redux Form](https://github.com/davidkpiano/react-redux-form)
+* [**React Redux Form**](https://github.com/davidkpiano/react-redux-form)
 * [**React Router**](https://github.com/reactjs/react-router)
 * [React Swipe](https://github.com/jed/react-swipe)
 * React Swiper, a Haxe React component for [Swiper](https://github.com/nolimits4web/Swiper)
