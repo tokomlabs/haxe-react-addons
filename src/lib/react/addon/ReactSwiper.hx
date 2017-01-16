@@ -27,10 +27,15 @@ extern class Swiper {
     public var activeIndex (default, null) : Int;
     public var previousIndex (default, null) : Int;
     public var slides (default, null) : Array<Dynamic>;
+    public var container (default, null) : Array<Dynamic>;
     public var wrapper (default, null) : Array<Dynamic>;
 }
 
 typedef SwiperOptions = {
+    ? slideClass : String,
+    ? wrapperClass : String,
+    ? prevButton : haxe.extern.EitherType<String,js.html.Element>,
+    ? nextButton : haxe.extern.EitherType<String,js.html.Element>,
     //
     ? initialSlide : Int,
     ? direction : String,
@@ -83,7 +88,9 @@ typedef ReactSwiperProps = {
     > ReactComponentProps,
     options : SwiperOptions,
     swiperIsInitialized : Null<Swiper -> Void>,
-    className : String
+    className : String,
+    ? style : Dynamic,
+    ? noWrapper : Bool
 }
 
 /**
@@ -116,29 +123,28 @@ class ReactSwiper extends ReactComponentOf<ReactSwiperProps, Dynamic, Dynamic> {
         swiper.destroy(true,true);
     }
 
-    override function componentDidMount() : Void {
+    override function componentDidMount() : Void { js.Browser.console.log(props);
 
         swiper = new Swiper(refs.node, props.options);
 
         if (props.swiperIsInitialized != null) props.swiperIsInitialized(this.swiper);
     }
 
-    private function getClassName() : String {
-
-        if (props.className != null && props.className.length > 0) {
-
-            return '${StringTools.trim(props.className)} swiper-container';
-        }
-
-        return "swiper-container";
-    }
-
     private function renderChildren() {
 
-        return [ for(ci in 0...props.children.length) jsx('<div key="{ ci }" className="swiper-slide">{ props.children[ci] }</div>') ];
+        return [ for(ci in 0...props.children.length) jsx('<div key={ ci } className="swiper-slide">{ props.children[ci] }</div>') ];
     }
 
-    override function render() {
+    override function render() { trace('renderSwiper');
+
+        if (props.noWrapper) {
+
+           return jsx('
+                <div className={ props.className } style={ props.style } ref="node">
+                    { props.children }
+                </div>
+            ');
+        }
 
         return jsx('
             <div className={ props.className } ref="node">
