@@ -1,26 +1,24 @@
-# Haxe externs for third party react components
+# Haxe externs for third party react js components
 
 Compatible with Haxe 3.2+ and [Haxe react](https://github.com/massiveinteractive/haxe-react) > 1.0.0.
 
+This lib provides a set of reusable externs and haxe-react components for React JS.
+
+If you are looking for react native externs, have a look [there](https://github.com/haxe-react/haxe-react-native).
+
 ### List of supported externs
 
-* (deprecated, use React Redux Form or other) [Formsy](https://github.com/christianalfoni/formsy-react)
-* (deprecated, use React Redux Form or other) [Formsy Material UI](https://github.com/mbrookes/formsy-material-ui)
-* [Material UI](http://www.material-ui.com/)
-* [Infinite](https://github.com/seatgeek/react-infinite)
-* [Infinite Scroller](https://github.com/CassetteRocks/react-infinite-scroller.git)
-* [Page Transitions](https://github.com/jaing/react-page-transitions)
 * [React addon CSS transition group](https://facebook.github.io/react/docs/animation.html)
 * [CSS transition replace](https://github.com/marnusw/react-css-transition-replace)
 * [**React Intl**](https://github.com/yahoo/react-intl)
 * [**React Redux**](https://github.com/reactjs/react-redux)
 * [**React Redux Form**](https://github.com/davidkpiano/react-redux-form)
 * [**React Router**](https://github.com/reactjs/react-router)
-* [React Swipe](https://github.com/jed/react-swipe)
 * React Swiper, a Haxe React component for [Swiper](https://github.com/nolimits4web/Swiper)
 * [React Tap Event](https://github.com/zilverline/react-tap-event-plugin)
 * [Redux Auth Wrapper](https://github.com/mjrussell/redux-auth-wrapper)
 * [React Chartist](https://github.com/lolJS/react-chartist)
+
 And more to come...
 
 ## API
