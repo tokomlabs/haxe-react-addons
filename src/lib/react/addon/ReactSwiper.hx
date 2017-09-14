@@ -66,6 +66,7 @@ typedef SwiperOptions = {
     ? loopAdditionalSlides : Int,
     ? loopedSlides : Int,
     // callbacks
+    ? runCallbacksOnInit : Bool,
     ? onInit : Swiper -> Void,
     ? onSlideChangeStart : Swiper -> Void,
     ? onSlideChangeEnd : Swiper -> Void,
