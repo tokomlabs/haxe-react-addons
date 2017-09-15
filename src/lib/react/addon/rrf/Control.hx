@@ -4,8 +4,8 @@ package react.addon.rrf;
 Extern for [ReactReduxForm](https://github.com/davidkpiano/react-redux-form)
 **/
 @:jsRequire('react-redux-form','Control')
-extern class Control extends react.ReactComponent {
-	// static public var text : Control;
+extern class Control {
+	static public var text : Dynamic;
 	// static public var custom : Control;
 	// static public var textarea : Control;
 	// static public var radio : Control;
