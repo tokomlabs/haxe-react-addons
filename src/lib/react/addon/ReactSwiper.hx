@@ -11,7 +11,11 @@ from Swiper -> js.html.Event -> Void to Swiper -> js.html.Event -> Void
 /**
 Extern for [Swiper](https://github.com/nolimits4web/Swiper)
 **/
-@:native("window.Swiper")
+
+@:native("Swiper")
+#if(!swiperGlobal)
+@:jsRequire("swiper","default")
+#end
 extern class Swiper {
     public function new(elt : js.html.DOMElement, options : SwiperOptions);
     public function updateSlidesSize() : Void;
@@ -38,7 +42,7 @@ typedef SwiperOptions = {
     ? nextButton : haxe.extern.EitherType<String,js.html.Element>,
     //
     ? initialSlide : Int,
-    ? direction : String,
+    ? direction : String, // 'vertical' or 'horizontal'
     ? speed : Int,
     ? setWrapperSize : Bool,
     ? virtualTranslate : Bool,
@@ -50,7 +54,7 @@ typedef SwiperOptions = {
     ? centeredSlides: Bool,
     // slides grid
     ? spaceBetween : Int,
-    ? slidesPerView : Int,
+    ? slidesPerView : Float,
     // pagination
     ? pagination : String,
     ? paginationType : String,
@@ -82,7 +86,8 @@ typedef SwiperOptions = {
     ? onTouchStart : Swiper -> Void,
     ? onProgress : Swiper -> Int -> Void,
     // FreeMode
-    ? freeModeMomentum : Bool
+    ? freeModeMomentum : Bool,
+    ? freeMode : Bool,
 }
 
 typedef ReactSwiperProps = {
@@ -99,7 +104,11 @@ Haxe rewrite of [SwiperComponent](https://github.com/poetic/meteor-react-swiper)
 **/
 class ReactSwiper extends ReactComponentOf<ReactSwiperProps, Dynamic, Dynamic> {
 
-    public function new() { super(); }
+#if(!swiperGlobal)
+    static var css = js.Lib.require('swiper/dist/css/swiper.css');
+#end
+
+    public function new(p) { super(p); }
 
     ///
     // Public Interface
@@ -148,7 +157,7 @@ class ReactSwiper extends ReactComponentOf<ReactSwiperProps, Dynamic, Dynamic> {
         }
 
         return jsx('
-            <div className={ props.className } ref="node">
+            <div className={ props.className } style={ props.style } ref="node">
                 <div className="swiper-wrapper">
                     { renderChildren() }
                 </div>
