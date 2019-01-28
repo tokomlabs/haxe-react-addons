@@ -6,6 +6,12 @@ typedef MessageDescriptor = {
 }
 
 extern class IntlShape {
+	public var locale : String;
+	public var formats : Dynamic;
+    public var messages : haxe.DynamicAccess<String>;
+    public var defaultLocale : String;
+    public var defaultFormats : Dynamic;
+	public function now() : Int;
 	public function formatDate(value : Dynamic, ? options : Dynamic) : String;
 	public function formatTime(value : Dynamic, ? options : Dynamic) : String;
 	public function formatRelative(value : Dynamic, ? options : Dynamic) : String;
